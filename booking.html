@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Delivery | Veritas Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo">Veritas</h1>
+            <nav>
+                <ul class="headerul">
+                    <li class="links"><a href="index.html" class="linkA">Home</a></li>
+                    <li class="links"><a href="services.html" class="linkA">Services</a></li>
+                    <li class="links"><a href="tracking.html" class="linkA">Tracking</a></li>
+                    <li class="links"><a href="about.html" class="linkA">About</a></li>
+                    <li class="links"><a href="booking.html" class="linkA booking-link">Booking</a></li>
+                    <li class="links"><a href="contact.html" class="linkA">Contact</a></li>
+                    <li class="links"><a href="register.html" class="reg-cta">Register</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+         <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-inner">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i><span>Services</span></a></li>
+                    <li><a href="tracking.html"><i class="fas fa-map-location-dot"></i><span>Tracking</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+                    <li><a href="booking.html" class="booking-link"><i class="fas fa-box"></i><span>Booking</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                    <li><a href="register.html" class="reg-cta"><i class="fas fa-user-plus"></i><span>Register</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="forms-container">
+            <section class="quote-section">
+            <div class="quote-card">
+                <h2 class="quote-title">Get a Quote</h2>
+                <form class="quote-form">
+                    <div class="form-group">
+                        <input type="text" id="quote-pickup" required>
+                        <label for="quote-pickup">Pickup Location</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="quote-delivery" required>
+                        <label for="quote-delivery">Delivery Location</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="quote-item-type" required>
+                            <option value="">Select Item Type</option>
+                            <option value="documents">Documents</option>
+                            <option value="package">Package</option>
+                            <option value="fragile">Fragile Items</option>
+                        </select>
+                        <label for="quote-item-type">Item Type</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="quote-weight" placeholder="e.g. 5kg" required>
+                        <label for="quote-weight">Weight/Size</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <button type="button" class="primary-btn quote-btn">Get Quote</button>
+                </form>
+                <div class="quote-result">
+                    <p>Estimated Price: <span>₦25,000</span></p>
+                </div>
+            </div>
+        </section>
+        <section class="booking-section">
+            <div class="booking-card">
+                <h2 class="booking-title">Book a Delivery</h2>
+                <form class="booking-form" id="bookingForm" novalidate>
+                    <div class="form-group">
+                        <input type="text" id="pickup" name="pickup" required>
+                        <label for="pickup">Pickup Location</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="delivery" name="delivery" required>
+                        <label for="delivery">Delivery Location</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <select id="itemType" name="itemType" required>
+                                <option value="" disabled selected>Select Item Type</option>
+                                <option value="parcel">Parcel</option>
+                                <option value="document">Document</option>
+                                <option value="furniture">Furniture</option>
+                                <option value="electronics">Electronics</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="itemType">Item Type</label>
+                            <span class="input-underline"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="weight" name="weight" placeholder="e.g. 5kg" required pattern="^[0-9]+(\.[0-9]{1,2})?\s?(kg|g|lb|oz)?$">
+                            <label for="weight">Weight/Size (e.g. 5kg)</label>
+                            <span class="input-underline"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="pickupDate" name="pickupDate" required>
+                        <label for="pickupDate">Pickup Date</label>
+                        <span class="input-underline"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="contactName" name="contactName" required>
+                            <label for="contactName">Contact Name</label>
+                            <span class="input-underline"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required pattern="^[0-9\-\+\s\(\)]{7,}$">
+                            <label for="phone">Phone Number</label>
+                            <span class="input-underline"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="instructions" name="instructions" rows="3" placeholder="Special Instructions (optional)"></textarea>
+                        <span class="input-underline"></span>
+                    </div>
+                    <button type="submit" class="primary-btn booking-btn">Book Delivery</button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+                <div class="success-message" style="display: none;">
+                    <p>✅ Booking Successful! We've received your request and will contact you shortly.</p>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Veritas</h3>
+                    <p class="footer-description">Reliable logistics solutions for businesses and individuals worldwide.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Express Delivery</a></li>
+                            <li><a href="services.html">Freight Shipping</a></li>
+                            <li><a href="services.html">Warehousing</a></li>
+                            <li><a href="tracking.html">Tracking</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><a href="mailto:info@veritaslogistics.com">info@veritaslogistics.com</a></li>
+                            <li><a href="tel:+2347040604118">+234 7040604118</a></li>
+                            <li>123 Logistics Ave<br>FCT Abuja</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">&copy; 2024 Veritas Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="booking.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

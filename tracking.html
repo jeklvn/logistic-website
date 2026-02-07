@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tracking.css">
+    <title>Track Your Shipment - Veritas Logistics</title>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo">Veritas</h1>
+            <nav>
+                <ul class="headerul">
+                    <li class="links"><a href="index.html" class="linkA">Home</a></li>
+                    <li class="links"><a href="services.html" class="linkA">Services</a></li>
+                    <li class="links"><a href="tracking.html" class="linkA">Tracking</a></li>
+                    <li class="links"><a href="about.html" class="linkA">About</a></li>
+                    <li class="links"><a href="booking.html" class="linkA booking-link">Booking</a></li>
+                    <li class="links"><a href="contact.html" class="linkA">Contact</a></li>
+                    <li class="links"><a href="register.html" class="reg-cta">Register</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+         <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-inner">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i><span>Services</span></a></li>
+                    <li><a href="tracking.html"><i class="fas fa-map-location-dot"></i><span>Tracking</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+                    <li><a href="booking.html" class="booking-link"><i class="fas fa-box"></i><span>Booking</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                    <li><a href="register.html" class="reg-cta"><i class="fas fa-user-plus"></i><span>Register</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="tracking-hero">
+            <div class="container">
+                <h1 class="tracking-title">Track Your Shipment</h1>
+                <p class="tracking-subtitle">Enter your tracking number below for real-time updates on your shipment status. Our advanced tracking system provides instant visibility into your package's journey.</p>
+                <form class="tracking-form">
+                    <input type="text" id="tracking-input" placeholder="Enter tracking number (e.g., VRT123456789)" required>
+                    <button type="submit" id="track-btn" class="btn-primary">Track Shipment</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="tracking-results" id="results" style="display: none;">
+            <div class="container">
+                <div class="status-header">
+                    <div class="status-badge status-in-transit">In Transit</div>
+                    <p class="last-updated">Last updated: <time id="last-updated">January 31, 2026, 10:00 AM</time></p>
+                </div>
+                <div class="shipment-summary">
+                    <div class="summary-item">
+                        <i class="fas fa-hashtag"></i>
+                        <span><strong>Tracking Number:</strong> <span id="track-num">VRT123456789</span></span>
+                    </div>
+                    <div class="summary-item">
+                        <i class="fas fa-route"></i>
+                        <span><strong>Route:</strong> PortHarcourt, Rivers State → Ikoyi, Lagos NG</span>
+                    </div>
+                    <div class="summary-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span><strong>Service:</strong> Express Delivery</span>
+                    </div>
+                    <div class="summary-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span><strong>Estimated Delivery:</strong> February 2, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline" id="timeline" style="display: none;">
+            <div class="container">
+                <h2>Shipment Progress</h2>
+                <div class="progress-steps">
+                    <div class="step completed">
+                        <i class="fas fa-box"></i>
+                        <div class="step-content">
+                            <h3>Picked Up</h3>
+                            <p>January 29, 2026, 2:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="step completed">
+                        <i class="fas fa-truck"></i>
+                        <div class="step-content">
+                            <h3>In Transit</h3>
+                            <p>En route via ground transport</p>
+                        </div>
+                    </div>
+                    <div class="step active">
+                        <i class="fas fa-shipping-fast"></i>
+                        <div class="step-content">
+                            <h3>Out for Delivery</h3>
+                            <p>Expected today</p>
+                        </div>
+                    </div>
+                    <div class="step delivered">
+                        <i class="fas fa-check-circle"></i>
+                        <div class="step-content">
+                            <h3>Delivered</h3>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section" id="map" style="display: none;">
+            <div class="container">
+                <h2>Live Location</h2>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.4436486850846!2d3.5253696!3d6.4281556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2a234567!2sLekki%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1234567890123" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions" id="actions" style="display: none;">
+            <div class="container">
+                <button id="track-another" class="btn-secondary">Track Another Shipment</button>
+                <button class="btn-secondary">Contact Support</button>
+                <a href="index.html" class="btn-primary">Get a Quote</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer animate-on-scroll">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-logo">Veritas</h3>
+                <p class="footer-description">Reliable logistics solutions for businesses and individuals worldwide.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Express Delivery</a></li>
+                        <li><a href="#">Freight Shipping</a></li>
+                        <li><a href="#">Warehousing</a></li>
+                        <li><a href="#">Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Track Shipment</a></li>
+                        <li><a href="#">Get a Quote</a></li>
+                        <li><a href="#">Customer Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Veritas Logistics. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="nav.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const trackBtn = document.getElementById('track-btn');
+            const trackAnotherBtn = document.getElementById('track-another');
+            const input = document.getElementById('tracking-input');
+            const results = document.getElementById('results');
+            const timeline = document.getElementById('timeline');
+            const map = document.getElementById('map');
+            const actions = document.getElementById('actions');
+            const trackNum = document.getElementById('track-num');
+
+            function showResults() {
+                const value = input.value.trim();
+                if (value) {
+                    trackNum.textContent = value;
+                    results.style.display = 'block';
+                    timeline.style.display = 'block';
+                    map.style.display = 'block';
+                    actions.style.display = 'block';
+                    // Scroll to results for better UX
+                    results.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+            trackBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                showResults();
+            });
+
+            trackAnotherBtn.addEventListener('click', function() {
+                input.value = '';
+                results.style.display = 'none';
+                timeline.style.display = 'none';
+                map.style.display = 'none';
+                actions.style.display = 'none';
+                input.focus();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="auth.css">
+    <title>Login - Veritas Logistics</title>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo">Veritas</h1>
+            <nav>
+                <ul class="headerul">
+                    <li class="links"><a href="index.html" class="linkA">Home</a></li>
+                    <li class="links"><a href="services.html" class="linkA">Services</a></li>
+                    <li class="links"><a href="tracking.html" class="linkA">Tracking</a></li>
+                    <li class="links"><a href="about.html" class="linkA">About</a></li>
+                    <li class="links"><a href="booking.html" class="linkA booking-link">Booking</a></li>
+                    <li class="links"><a href="contact.html" class="linkA">Contact</a></li>
+                    <li class="links"><a href="register.html" class="reg-cta">Register</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+         <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-inner">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i><span>Services</span></a></li>
+                    <li><a href="tracking.html"><i class="fas fa-map-location-dot"></i><span>Tracking</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+                    <li><a href="booking.html" class="booking-link"><i class="fas fa-box"></i><span>Booking</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                    <li><a href="register.html" class="reg-cta"><i class="fas fa-user-plus"></i><span>Register</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-card animate-on-scroll">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Login to your Veritas Logistics account</p>
+                </div>
+
+                <form id="loginForm" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+                        <label for="email">Email Address</label>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" id="password" name="password" placeholder="Your password" autocomplete="current-password" required>
+                        <label for="password">Password</label>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    
+                    <div id="formMessage" class="form-message" aria-live="polite"></div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html">Create one here</a></p>
+                </div>
+            </div>
+
+            <div class="auth-benefits">
+                <h2>Access Your Account</h2>
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="fas fa-box-open"></i>
+                        <h3>View Bookings</h3>
+                        <p>See all your shipments in one place</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-map"></i>
+                        <h3>Track Shipments</h3>
+                        <p>Real-time tracking for deliveries</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-quote-left"></i>
+                        <h3>Manage Quotes</h3>
+                        <p>View and manage quote requests</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-bell"></i>
+                        <h3>Get Alerts</h3>
+                        <p>Notifications on shipment updates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer animate-on-scroll">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Veritas</h3>
+                    <p class="footer-description">Reliable logistics solutions for businesses and individuals.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Express Delivery</a></li>
+                            <li><a href="#">Freight Shipping</a></li>
+                            <li><a href="#">Warehousing</a></li>
+                            <li><a href="tracking.html">Tracking</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="tracking.html">Track Shipment</a></li>
+                            <li><a href="booking.html">Get a Quote</a></li>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Veritas Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="authManager.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Dashboard - Veritas Logistics</title>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <h1 class="logo">Veritas</h1>
+            <nav>
+                <ul class="headerul">
+                    <li class="links"><a href="index.html" class="linkA">Home</a></li>
+                    <li class="links"><a href="booking.html" class="linkA booking-link">New Booking</a></li>
+                    <li class="links"><a href="contact.html" class="linkA">Support</a></li>
+                    <li class="links"><span class="linkA user-info"><i class="fas fa-user-circle"></i> <span id="userName">User</span></span></li>
+                    <li class="links"><a href="#" class="linkA logout-btn" id="logoutBtn">Logout</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+         <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-inner">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="booking.html" class="booking-link"><i class="fas fa-box"></i><span>Booking</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Support</span></a></li>
+                    <li><a href="#" id="profileBtn"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li><a href="#" id="logoutMobileBtn" class="reg-cta"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <!-- Welcome Section -->
+        <section class="dashboard-welcome">
+            <div class="container">
+                <div class="welcome-content animate-on-scroll">
+                    <div>
+                        <h1>Welcome, <span id="welcomeName">User</span>!</h1>
+                        <p>Manage your shipments, quotes, and track deliveries from your dashboard</p>
+                    </div>
+                    <a href="booking.html" class="btn btn-primary">
+                        <i class="fas fa-plus"></i> New Booking
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Overview -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Active Bookings</h3>
+                            <p class="stat-number" id="activeCount">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Delivered</h3>
+                            <p class="stat-number" id="deliveredCount">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Pending Quotes</h3>
+                            <p class="stat-number" id="quotesCount">0</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Notifications</h3>
+                            <p class="stat-number" id="notifCount">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="dashboard-content">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <!-- Bookings Section -->
+                    <div class="panel-section animate-on-scroll">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-box"></i> Recent Bookings</h2>
+                            <a href="booking.html" class="btn btn-sm btn-primary">Add Booking</a>
+                        </div>
+
+                        <div id="bookingsContainer" class="bookings-table-wrapper">
+                            <p class="empty-state">
+                                <i class="fas fa-inbox"></i>
+                                No bookings yet. Create your first booking to get started.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quotes Section -->
+                    <div class="panel-section animate-on-scroll">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-quote-left"></i> Quotes</h2>
+                            <a href="booking.html" class="btn btn-sm btn-outline">Request Quote</a>
+                        </div>
+
+                        <div id="quotesContainer" class="quotes-grid">
+                            <p class="empty-state">
+                                <i class="fas fa-lightbulb"></i>
+                                No quotes yet. Request one to see pricing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Notifications Section -->
+                    <div class="panel-section animate-on-scroll">
+                        <div class="panel-header">
+                            <h2><i class="fas fa-bell"></i> Notifications</h2>
+                            <button id="clearNotifs" class="btn btn-sm btn-ghost" style="display:none;">Clear All</button>
+                        </div>
+
+                        <div id="notificationsContainer" class="notifications-list">
+                            <p class="empty-state">
+                                <i class="fas fa-check"></i>
+                                All caught up! No new notifications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer animate-on-scroll">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Veritas</h3>
+                    <p class="footer-description">Reliable logistics solutions for businesses and individuals.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Express Delivery</a></li>
+                            <li><a href="#">Freight Shipping</a></li>
+                            <li><a href="#">Warehousing</a></li>
+                            <li><a href="tracking.html">Tracking</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="tracking.html">Track Shipment</a></li>
+                            <li><a href="booking.html">Get a Quote</a></li>
+                            <li><a href="dashboard.html">Dashboard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Veritas Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="authManager.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

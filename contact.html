@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Contact Veritas Logistics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+            <div class="header-inner">
+                <h1 class="logo">Veritas</h1>
+                <nav>
+                    <ul class="headerul">
+                        <li class="links"><a href="index.html" class="linkA">Home</a></li>
+                        <li class="links"><a href="services.html" class="linkA">Services</a></li>
+                        <li class="links"><a href="tracking.html" class="linkA">Tracking</a></li>
+                        <li class="links"><a href="about.html" class="linkA">About</a></li>
+                        <li class="links"><a href="booking.html" class="linkA booking-link">Booking</a></li>
+                        <li class="links"><a href="contact.html" class="linkA">Contact</a></li>
+                        <li class="links"><a href="register.html" class="reg-cta">Register</a></li>
+                    </ul>
+                    <div class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+             <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-inner">
+                <ul class="mobile-nav-list">
+                    <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                    <li><a href="services.html"><i class="fas fa-cogs"></i><span>Services</span></a></li>
+                    <li><a href="tracking.html"><i class="fas fa-map-location-dot"></i><span>Tracking</span></a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+                    <li><a href="booking.html" class="booking-link"><i class="fas fa-box"></i><span>Booking</span></a></li>
+                    <li><a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+                    <li><a href="register.html" class="reg-cta"><i class="fas fa-user-plus"></i><span>Register</span></a></li>
+                </ul>
+            </div>
+        </div>
+        </header>
+
+    <main class="contact-page">
+        <section class="contact-hero animate-on-scroll">
+            <div class="hero-inner container">
+                <h1>Contact Veritas Logistics</h1>
+                <p class="lead">We operate across Nigeria and are always ready to assist with your deliveries. Reach us by phone, WhatsApp, email or using the form below.</p>
+            </div>
+        </section>
+
+        <section class="contact-overview container animate-on-scroll">
+            <div class="cards-grid">
+                <div class="card contact-card">
+                    <div class="card-icon"><i class="fas fa-phone"></i></div>
+                    <div class="card-body">
+                        <h4>Phone</h4>
+                        <a href="tel:+2348090000000">+234 809 000 0000</a>
+                        <p class="muted">Call us for urgent support</p>
+                    </div>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="card-body">
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/2348090000000" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                        <p class="muted">Fast replies via WhatsApp</p>
+                    </div>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="card-body">
+                        <h4>Email</h4>
+                        <a href="mailto:hello@veritaslogistics.ng">hello@veritaslogistics.ng</a>
+                        <p class="muted">Business enquiries and support</p>
+                    </div>
+                </div>
+
+                <div class="card contact-card">
+                    <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="card-body">
+                        <h4>Main Office</h4>
+                        <a href="https://www.google.com/maps/search/Abuja,+Nigeria" target="_blank" rel="noopener">Central Business District, Abuja</a>
+                        <p class="muted">Operating in WAT (West Africa Time)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-grid container">
+            <div class="contact-form-panel animate-on-scroll">
+                <h2>Send Us a Message</h2>
+                <p class="muted">Quick response within 24 hours. For urgent requests use WhatsApp or call directly.</p>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="two-col">
+                        <label class="field">
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            <span class="label-text">Full name</span>
+                        </label>
+
+                        <label class="field">
+                            <input type="text" id="contact" name="contact" placeholder="you@example.com or +234 701 ..." required>
+                            <span class="label-text">Email or Phone</span>
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <select id="inquiry" name="inquiry">
+                            <option value="">General inquiry</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="tracking">Tracking Support</option>
+                            <option value="partnership">Partnerships</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="label-text">Inquiry type (optional)</span>
+                    </label>
+
+                    <label class="field">
+                        <textarea id="message" name="message" placeholder="Tell us how we can help" required></textarea>
+                        <span class="label-text">Message</span>
+                    </label>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <a href="booking.html" class="btn btn-outline">Request a Free Quote</a>
+                    </div>
+
+                    <div id="formStatus" class="form-status" aria-live="polite"></div>
+                </form>
+
+                <div class="faq">
+                    <h3>Quick FAQ</h3>
+                    <details>
+                        <summary>How long until I receive a quote?</summary>
+                        <p>Most quotes are returned within 1–2 business hours depending on complexity.</p>
+                    </details>
+                    <details>
+                        <summary>Do you operate outside Abuja?</summary>
+                        <p>Yes — we operate across Nigeria with main offices in Abuja and Lagos.</p>
+                    </details>
+                </div>
+            </div>
+
+            <aside class="contact-info-panel animate-on-scroll">
+                <div class="info-block card">
+                    <h3>Office & Hours</h3>
+                    <p><strong>Central Business District, Abuja</strong></p>
+                    <p class="muted">Mon–Fri: 08:00 – 18:00 WAT<br>Sat: 09:00 – 14:00 WAT</p>
+                </div>
+
+                <h4 class="map-title">Our Office (Abuja)</h4>
+                <div class="map-block card animate-on-scroll">
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1234567890123!2d7.4697!3d9.0765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11a4b7f0abcd!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1234567890123" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="testimonial card">
+                    <h4>What clients say</h4>
+                    <blockquote>"Reliable service and great tracking — Veritas delivered on time."</blockquote>
+                    <cite>- Jane M., Retailer</cite>
+                </div>
+
+                <div class="secondary-cta">
+                    <a href="booking.html" class="btn btn-outline">Chat with Us Now</a>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer class="footer animate-on-scroll">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Veritas</h3>
+                    <p class="footer-description">Reliable logistics solutions for businesses and individuals.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="services.html">Express Delivery</a></li>
+                            <li><a href="#">Freight Shipping</a></li>
+                            <li><a href="#">Warehousing</a></li>
+                            <li><a href="tracking.html">Tracking</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="tracking.html">Track Shipment</a></li>
+                            <li><a href="booking.html">Get a Quote</a></li>
+                            <li><a href="#">Customer Portal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="copyright">&copy; 2026 Veritas Logistics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

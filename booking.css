@@ -1,0 +1,362 @@
+/* Booking Page Styles - Consistent with Veritas Logistics Design System */
+
+.forms-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 12px;
+    background: linear-gradient(120deg, #f7f9fc 60%, #e3edfa 100%);
+    min-height: 100vh;
+}
+
+.quote-section {
+    flex: 1;
+    max-width: 420px;
+}
+
+.booking-section {
+    flex: 1;
+    max-width: 420px;
+}
+
+.booking-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.13);
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 36px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeInUp 0.5s cubic-bezier(.4,1.4,.6,1) 1;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.booking-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 12px 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 1rem;
+    color: #0f172a;
+    font-family: inherit;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #0b6efd;
+    box-shadow: 0 0 0 3px rgba(11, 110, 253, 0.1);
+    background: #ffffff;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 16px;
+    color: #6b7280;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(.4,1.4,.6,1);
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form-group input:focus + label,
+.form-group select:focus + label,
+.form-group textarea:focus + label {
+    top: -10px;
+    left: 8px;
+    font-size: 0.85rem;
+    color: #0b6efd;
+    background: #fff;
+    padding: 0 4px;
+    border-radius: 4px;
+    font-weight: 600;
+    opacity: 1;
+    visibility: visible;
+}
+
+.input-underline {
+    display: none;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group select:invalid:not(:focus),
+.form-group textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #ff4d4f;
+    background: #ffffff;
+}
+
+.primary-btn.booking-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #0b6efd 60%, #0056b3 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    margin-top: 8px;
+    box-shadow: 0 4px 16px rgba(11,110,253,0.10);
+    cursor: pointer;
+    transition: background 0.25s, transform 0.18s, box-shadow 0.18s;
+    outline: none;
+}
+.primary-btn.booking-btn:hover,
+.primary-btn.booking-btn:focus {
+    background: linear-gradient(90deg, #0056b3 60%, #0b6efd 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(11,110,253,0.16);
+}
+.primary-btn.booking-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(11,110,253,0.10);
+}
+
+.primary-btn.quote-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #6c757d 60%, #495057 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    margin-top: 8px;
+    box-shadow: 0 4px 16px rgba(108,117,125,0.10);
+    cursor: pointer;
+    transition: background 0.25s, transform 0.18s, box-shadow 0.18s;
+    outline: none;
+}
+.primary-btn.quote-btn:hover,
+.primary-btn.quote-btn:focus {
+    background: linear-gradient(90deg, #495057 60%, #6c757d 100%);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(108,117,125,0.16);
+}
+.primary-btn.quote-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(108,117,125,0.10);
+}
+
+.quote-section {
+    flex: 1;
+    max-width: 420px;
+}
+
+.quote-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.13);
+    max-width: 420px;
+    width: 100%;
+    margin: 0;
+    padding: 36px 28px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.quote-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.quote-result {
+    text-align: center;
+    font-weight: 600;
+    color: #0b6efd;
+    margin-top: 20px;
+}
+
+.success-message {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-message {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 24px;
+    color: #0b6efd;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+@media (max-width: 480px) {
+    .forms-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 10px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .quote-section,
+    .booking-section {
+        max-width: none;
+        width: 90%;
+
+    }
+
+    .quote-card,
+    .booking-card {
+        max-width: none;
+        padding: 20px 15px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .quote-form,
+    .booking-form {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .quote-title,
+    .booking-title {
+        font-size: 1.4rem;
+    }
+
+    .primary-btn.quote-btn,
+    .primary-btn.booking-btn {
+        width: 100%;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 16px 12px;
+        font-size: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Hide number input arrows for weight */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quote-result {
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2ff 100%);
+    border-radius: 8px;
+    border-left: 4px solid #0b6efd;
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.quote-result.show {
+    display: block;
+}
+
+.quote-result p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.quote-result span {
+    color: #0b6efd;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile menu override for booking page */
+.mobile-menu ul li a.booking-link {
+    color: #ffe082;
+    font-weight: 700;
+}
+.headerul .booking-link {
+    color: #0b6efd;
+    font-weight: 700;
+    border-bottom: 2px solid #0b6efd;
+}
