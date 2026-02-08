@@ -130,6 +130,7 @@ header {
     color: #ffffff;
     margin-bottom: 24px; /* Clear separation from subheading */
     text-wrap: balance;
+     animation: fadein 1000ms ease-out forwards;
 }
 
 .hero-subheading {
@@ -141,6 +142,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     text-wrap: balance;
+    animation: fadein 0.5s ease-out forwards;
 }
 
 /* CTA buttons with clear hierarchy */
@@ -221,6 +223,17 @@ header {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive design - Mobile first approach */
@@ -318,7 +331,7 @@ header {
 
 /* Polished services title and intro */
 .services-title {
-    font-size: 2rem;
+    font-size: 2.5rem !important;
     line-height: 1.1;
     margin-bottom: 10px;
     font-weight: 700;
@@ -408,6 +421,18 @@ header {
     transform: translateY(-1px);
 }
 
+/* Scroll-triggered animations for dynamic feel */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 480px) {
     .service-card img { height: 140px; }
 }
@@ -492,6 +517,10 @@ header {
     .steps-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .services-title{
+        text-align: center;
     }
     
     .how-it-works {
