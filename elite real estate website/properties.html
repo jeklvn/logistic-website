@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties | Elite Properties</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- UPDATED MOBILE NAVIGATION CSS --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                border-top: 1px solid #eee;
+            }
+            .nav-ul.active {
+                display: flex;
+                animation: slideDown 0.3s ease-out;
+            }
+            .nav-ul li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #f0f0f0;
+            }
+            .nav-ul li a {
+                display: block;
+                padding: 20px;
+                width: 100%;
+                font-size: 1rem;
+            }
+            .toggle .line1 { transform: rotate(45deg) translate(5px, 6px); }
+            .toggle .line2 { opacity: 0; }
+            .toggle .line3 { transform: rotate(-45deg) translate(5px, -6px); }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Filter Active State */
+        .filter-btn.active {
+            background-color: var(--primary) !important;
+            color: var(--white) !important;
+            border-color: var(--primary) !important;
+        }
+
+        /* --- ANIMATIONS ONLY --- */
+        .hero-section, .properties, .property-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Elite<span>Properties</span></h1>
+
+        <nav>
+            <ul class="nav-ul" id="nav-menu">
+                <li><a href="index.html" class="linksa">Home</a></li>
+                <li><a href="properties.html" class="linksa" style="color: var(--accent);">Properties</a></li>
+                <li><a href="about.html" class="linksa">About</a></li>
+                <li><a href="contact.html" class="linksa">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" id="hamburger-btn">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-section" style="height: 50vh; background: linear-gradient(rgba(11, 31, 59, 0.7), rgba(11, 31, 59, 0.7)), url('project-images/hero-img.jpeg') center/cover no-repeat;">
+            <h2 class="hero-title">Exclusive Properties</h2>
+            <p class="hero-description">The most prestigious addresses in the city, curated just for you.</p>
+        </section>
+
+        <section class="properties">
+            <h2 class="section-title">Our Portfolio</h2>
+
+            <div class="cta-container" style="justify-content: center; margin-bottom: 50px; flex-wrap: wrap; gap: 10px;">
+                <button class="cta-button filter-btn active" data-filter="all">All</button>
+                <button class="cta-button-secondary filter-btn" data-filter="sale" style="color: var(--primary); border-color: var(--primary);">For Sale</button>
+                <button class="cta-button-secondary filter-btn" data-filter="rent" style="color: var(--primary); border-color: var(--primary);">For Rent</button>
+                <button class="cta-button-secondary filter-btn" data-filter="new" style="color: var(--primary); border-color: var(--primary);">New Construction</button>
+            </div>
+
+            <div class="featured-grid">
+                <div class="property-card" data-category="sale">
+                    <div class="img-container">
+                        <img src="house-folder/property-5.jpg" class="property-image">
+                        <span class="tag">For Sale</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Modern Duplex, GRA</h3>
+                        <h4 class="property-price">₦85,000,000</h4>
+                        <p class="property-detail">4 Bedrooms • 4 Bathrooms</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="rent">
+                    <div class="img-container">
+                        <img src="house-folder/property-2.jpg" class="property-image">
+                        <span class="tag">For Rent</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Skyline Apartment</h3>
+                        <h4 class="property-price">₦12,000,000/yr</h4>
+                        <p class="property-detail">3 Bedrooms • Ocean View</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="new">
+                    <div class="img-container">
+                        <img src="project-images/hero-img.jpg.jpeg" class="property-image">
+                        <span class="tag">New Build</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">The Grand Terrace</h3>
+                        <h4 class="property-price">₦55,000,000</h4>
+                        <p class="property-detail">5 Bedrooms • Gym Access</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="sale">
+                    <div class="img-container">
+                        <img src="house-folder/property-6.jpg" class="property-image">
+                        <span class="tag">For Sale</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Lekki Suburban Villa</h3>
+                        <h4 class="property-price">₦95,000,000</h4>
+                        <p class="property-detail">5 Bedrooms • Large Pool</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="rent">
+                    <div class="img-container">
+                        <img src="house-folder/property-3.jpg" class="property-image">
+                        <span class="tag">For Rent</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">VI Executive Studio</h3>
+                        <h4 class="property-price">₦4,500,000/yr</h4>
+                        <p class="property-detail">1 Bedroom • Serviced</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+
+                <div class="property-card" data-category="new">
+                    <div class="img-container">
+                        <img src="house-folder/property-1.jpg" class="property-image">
+                        <span class="tag">Pre-launch</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Azure Smart Towers</h3>
+                        <h4 class="property-price">₦42,000,000</h4>
+                        <p class="property-detail">2 Bedrooms • Tech-Ready</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="background: #050e1a; color: white; padding: 80px 8% 20px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 50px;">
+            <div>
+                <h2 class="logo">Elite<span>Properties</span></h2>
+                <p style="margin-top: 15px; opacity: 0.7;">Redefining luxury real estate across Nigeria.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; color: var(--accent);">Quick Links</h4>
+                <ul style="list-style: none; line-height: 2;">
+                    <li><a href="index.html" style="color: white; text-decoration: none; opacity: 0.7;">Home</a></li>
+                    <li><a href="properties.html" style="color: white; text-decoration: none; opacity: 0.7;">Properties</a></li>
+                    <li><a href="about.html" style="color: white; text-decoration: none; opacity: 0.7;">Our Story</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px; color: var(--accent);">Contact</h4>
+                <p style="opacity: 0.7;">info@eliteproperties.com</p>
+                <p style="opacity: 0.7;">+234 800 ELITE PROP</p>
+            </div>
+        </div>
+        <p style="text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Elite Properties. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // 1. Mobile Navigation Toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('toggle');
+        });
+
+        // 2. Tab Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.property-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'cta-button');
+                    b.classList.add('cta-button-secondary');
+                    b.style.color = 'var(--primary)';
+                });
+                btn.classList.add('active', 'cta-button');
+                btn.classList.remove('cta-button-secondary');
+                btn.style.color = 'var(--white)';
+
+                const filter = btn.getAttribute('data-filter');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Animate visible cards
+                setTimeout(() => {
+                    document.querySelectorAll('.property-card').forEach(c => {
+                        if(c.style.display !== 'none') c.classList.add('visible');
+                    });
+                }, 50);
+            });
+        });
+
+        // 3. Scroll-triggered Animations
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.property-card, .hero-section, .properties').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Properties | Luxury Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        /* --- Animation Styles --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hero Initial States */
+        .hero-title {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .hero-description {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.3s forwards;
+        }
+
+        .cta-container {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
+        }
+
+        /* Scroll Reveal Base Class */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
+            will-change: transform, opacity;
+        }
+
+        /* When the element is in view */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered Delays for Grids */
+        .delay-1 { transition-delay: 0.2s; }
+        .delay-2 { transition-delay: 0.4s; }
+        .delay-3 { transition-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1 class="logo">Elite<span>Properties</span></h1>
+        <nav>
+            <ul class="nav-ul" id="nav-menu">
+                <li><a href="index.html" class="linksa">Home</a></li>
+                <li><a href="properties.html" class="linksa">Properties</a></li>
+                <li><a href="about.html" class="linksa" style="color: var(--accent);">About</a></li>
+                <li><a href="contact.html" class="linksa">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger-btn">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </button>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2 class="hero-title">Invest In More Than A House.<br>Invest In A Legacy.</h2>
+            <p class="hero-description">Discover curated high-value listings and expert guidance. Whether you're seeking a modern sanctuary or a strategic investment, we bring you home.</p>
+            <div class="cta-container">
+                <a href="properties.html" class="cta-button">View Properties</a>
+                <a href="contact.html" class="cta-button-secondary">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="properties">
+            <h2 class="section-title reveal">Featured Properties</h2>
+            <p class="section-subtitle reveal">Handpicked residences in the most prestigious neighborhoods.</p>
+            
+            <div class="featured-grid">
+                <div class="property-card reveal">
+                    <div class="img-container">
+                        <img src="house-folder/property-2.jpg" alt="Modern Duplex" class="property-image">
+                        <span class="tag">For Sale</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Modern Duplex, GRA Phase II</h3>
+                        <h4 class="property-price">₦85,000,000</h4>
+                        <p class="property-detail">4 Bedrooms • 4 Bathrooms • Smart Home Features</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="property-card reveal delay-1">
+                    <div class="img-container">
+                        <img src="house-folder/property-3.jpg" alt="Luxury Villa" class="property-image">
+                        <span class="tag">Featured</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Skyline Apartment, Eko Atlantic</h3>
+                        <h4 class="property-price">₦120,000,000</h4>
+                        <p class="property-detail">3 Bedrooms • Ocean View • Fully Furnished</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="property-card reveal delay-2">
+                    <div class="img-container">
+                        <img src="house-folder/property-4.jpg" alt="Suburban Home" class="property-image">
+                        <span class="tag">New</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">The Grand Terrace, Lekki</h3>
+                        <h4 class="property-price">₦55,000,000</h4>
+                        <p class="property-detail">5 Bedrooms • Gym • Private Security</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="property-card reveal delay-3">
+                    <div class="img-container">
+                        <img src="house-folder/property-5.jpg" alt="Penthouse" class="property-image">
+                        <span class="tag">For Sale</span>
+                    </div>
+                    <div class="property-info-container">
+                        <h3 class="property-title">Minimalist Loft, Maitama</h3>
+                        <h4 class="property-price">₦95,000,000</h4>
+                        <p class="property-detail">2 Bedrooms • Open Plan • Rooftop Garden</p>
+                        <a href="contact.html" class="property-link">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="about-content-container">
+                <div class="about-img-container reveal">
+                    <img src="house-folder/property-3.jpg" alt="Our Office" class="about-image">
+                </div>
+                <div class="about-text-container reveal">
+                    <h2 class="about-title">Experience Excellence in Real Estate</h2>
+                    <p class="about-description">
+                        At <strong>Elite Properties</strong>, we don’t just close deals; we build futures. Founded on the principles of integrity and white-glove service, we specialize in connecting discerning clients with premium real estate opportunities.
+                    </p>
+                    <p class="about-description">
+                        Our team combines deep market analytics with a personalized touch, ensuring that whether you are a first-time buyer or a seasoned investor, your journey is seamless, transparent, and rewarding.
+                    </p>
+                    <div>
+                        <a href="about.html" class="about-cta-button">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="testimonial-header reveal">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real stories from homeowners who found their perfect match with Elite Properties.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">Finding a home in GRA was stressful until I met the Elite team. Their attention to detail and knowledge of the neighborhood made the entire process seamless.</p>
+                    <div class="client-info">
+                        <img src="https://ui-avatars.com/api/?name=Chidi+O.&background=0b1f3b&color=fff" alt="Client" class="client-avatar">
+                        <div>
+                            <h5 class="client-name">Chidi Okoro</h5>
+                            <p class="client-role">Homeowner, GRA Phase II</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-1">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">As an investor, I value transparency and data. Elite Properties provided me with market insights that helped me secure a high-yield property in Lekki.</p>
+                    <div class="client-info">
+                        <img src="https://ui-avatars.com/api/?name=Sarah+J.&background=0b1f3b&color=fff" alt="Client" class="client-avatar">
+                        <div>
+                            <h5 class="client-name">Sarah Johnson</h5>
+                            <p class="client-role">Real Estate Investor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-2">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">The professionalism here is unmatched. They didn't just sell me a house; they helped me find a community for my growing family. Highly recommended!</p>
+                    <div class="client-info">
+                        <img src="https://ui-avatars.com/api/?name=Amara+W.&background=0b1f3b&color=fff" alt="Client" class="client-avatar">
+                        <div>
+                            <h5 class="client-name">Amara Williams</h5>
+                            <p class="client-role">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal delay-3">
+                    <div class="quote-icon">“</div>
+                    <p class="testimonial-text">I needed to sell my property quickly and at a fair price. Elite Properties handled the marketing and closing within 30 days. Truly elite service.</p>
+                    <div class="client-info">
+                        <img src="https://ui-avatars.com/api/?name=David+L.&background=0b1f3b&color=fff" alt="Client" class="client-avatar">
+                        <div>
+                            <h5 class="client-name">David Lawson</h5>
+                            <p class="client-role">Former Property Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta reveal">
+            <h2>Start Your Journey Today</h2>
+            <p>Whether buying, selling, or investing, our experts are ready to guide you.</p>
+            <a href="contact.html" class="cta-button">Book a Consultation</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="logo">Elite<span>Properties</span></h2>
+                <p>Redefining luxury real estate across Nigeria.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="contact.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>123 Luxury Way, Lekki Phase 1, Lagos</p>
+                <p>+234 800 ELITE PROP</p>
+                <p>info@eliteproperties.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Elite Properties. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger Menu Logic
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('toggle');
+        });
+
+        // Scroll Reveal Logic
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Stop observing once animated
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of element is visible
+            rootMargin: '0px 0px -50px 0px' // Trigger slightly before element hits viewport
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
